@@ -5,6 +5,10 @@
   max-width: 600px;
 }
 
+body {
+  background:rgb(197, 139, 197);
+}
+
 .timeDate {
   font-size: 15px;
   font-weight: bold;
