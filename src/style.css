@@ -1,5 +1,5 @@
 .weather-app {
-  background: rgb(255, 255, 255, 0,3);
+  background: rgb(255, 255, 255, 0.2);
   padding: 15px;
   margin: 20px auto;
   border-radius: 10px;
@@ -7,7 +7,7 @@
 }
 
 body {
-  background:rgb(197, 139, 197);
+  background:rgba(233, 179, 233, 0.7);
 }
 
 .timeDate {
