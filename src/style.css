@@ -113,7 +113,8 @@ li {
   font-size: 15px;
   font-weight: bold;
   font-family: "Ubuntu", sans-serif;
-  padding-bottom: 5px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .future-forecast-description {
@@ -129,7 +130,7 @@ li {
 
 footer {
   display: block;
-  padding-top: 20px;
+  padding-top: 50px;
   font-size: 10px;
   font-family: "Ubuntu", sans-serif;
   text-decoration: none;
