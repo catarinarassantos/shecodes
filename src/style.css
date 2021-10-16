@@ -22,7 +22,11 @@ body {
 .search-bar {
   border-radius: 3px;
   font-size: 14px;
+}
+
+#city-input {
   background: #f9f7fe;
+  border: none;
 }
 
 #submit {
