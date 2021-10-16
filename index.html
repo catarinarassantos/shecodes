@@ -15,50 +15,54 @@
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
-    <title>Wireframe</title>
+    <title>Weather App</title>
   </head>
   <body>
     <div class="container">
         <div class="weather-app">
       <form class="search-bar" id="search-bar">
           <div class="row">
-              <div class="col-7">
-                <input type="search" placeholder="Where to go next?" autofocus="on" autocomplete="off" id="city-input" />
-            <input type="submit" value="🔍" id="submit" w="100" />
-            <button id="current" w="100">🚩</button>
+              <div class="col-9">
+                <input type="search" placeholder="Type a city to search..." autofocus="on" autocomplete="off" id="city-input" />
               </div>
+              <div class="col-3 p-0">    
+                <input type="submit" value="Search" id="submit" />
+            <button id="current">📍</button>
+              </div>
+            </div>
           </form>
-            <div class="timeDate"></div>
             <div id="city"></div>
-          <div class="row">
+            <div class="timeDate"></div>
+            <div class="row" id="middle-bar">
               <div class="col-6">
                 <div class="clearfix">
                   <div class="float-left">
-                    <span class="temperature" id="temperature">10</span><span class="celsius">°C</span>
+                    <span class="temperature" id="temperature"></span><span class="celsius">°C</span>
                   </div>
                 </div>
               </div>
               <div class="col-6">
                 <ul>
                   <li id="temp-description"></li>
-                  <li id="temp-variables">Humidity <span id="humidity"></span>% 💧</li>
-                  <li id="temp-variables">Wind <span id="wind"></span>km/h 💨</li>
+                  <li id="temp-variables"><span id="humidity"></span> % Humidity 💧</li>
+                  <li id="temp-variables"><span id="wind"></span> km/h Wind 💨</li>
                 </ul>
               </div>
       <div class="row">
-        <div class="col week-days">Monday</div>
-        <div class="col week-days">Tuesday</div>
-        <div class="col week-days">Wednesday</div>
-        <div class="col week-days">Thursday</div>
-        <div class="col week-days">Friday</div>
+        <div class="col week-days">Mon</div>
+        <div class="col week-days">Tue</div>
+        <div class="col week-days">Wed</div>
+        <div class="col week-days">Thu</div>
+        <div class="col week-days">Fri</div>
       </div>
       <div class="row">
-          <div class="col future-forecast-description">▼ 13°/<strong> ▲ 22°</strong></div>
-          <div class="col future-forecast-description">▼ 13°/<strong> ▲ 22°</strong></div>
-          <div class="col future-forecast-description">▼ 13°/<strong> ▲ 22°</strong></div>
-          <div class="col future-forecast-description">▼ 13°/<strong> ▲ 22°</strong></div>
-          <div class="col future-forecast-description">▼ 13°/<strong> ▲ 22°</strong></div>
+        <div class="col future-forecast-description">⛅</br>13° <strong> 22°</strong></div>
+        <div class="col future-forecast-description">⛅</br>7° <strong> 22°</strong></div>
+        <div class="col future-forecast-description">⛅</br>13° <strong> 22°</strong></div>
+        <div class="col future-forecast-description">⛅</br>13° <strong> 22°</strong></div>
+        <div class="col future-forecast-description">⛅</br>13° <strong> 22°</strong></div>
         </div>
+        <footer>This project was coded by <a href="https://www.instagram.com/catarinarassantos/" id="links" target="_blank" target="_blank">Catarina</a> and is open-sourced on <a href="https://github.com/catarinarassantos/shecodes" id="links" target="_blank">GitHub</a> and hosted on <a href="https://nifty-bohr-bc921f.netlify.app/" target="_blank" id="links">Netlify</a></footer>
         <script src="src/index.js"></script>
   </body>
 </html>
