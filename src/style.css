@@ -93,7 +93,7 @@ button {
 #temp-variables {
   color: rgb(100, 100, 100);
   font-family: "Ubuntu", sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   padding-top: 10px;
   font-weight: lighter;
 }
@@ -129,6 +129,7 @@ li {
 }
 
 footer {
+  color: rgb(100, 100, 100);
   display: block;
   text-align: center;
   padding-top: 30px;
