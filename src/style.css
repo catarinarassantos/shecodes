@@ -130,11 +130,11 @@ li {
 
 footer {
   display: block;
-  padding-top: 50px;
+  text-align: center;
+  padding-top: 60px;
   font-size: 10px;
   font-family: "Ubuntu", sans-serif;
   text-decoration: none;
-  text-align: center;
 }
 
 #links {
