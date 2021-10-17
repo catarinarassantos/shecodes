@@ -1,6 +1,8 @@
 //Current Date & Time
 
-function formatDate(date) {
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -9,17 +11,17 @@ function formatDate(date) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let weekDay = date.getDay();
-  let week = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
+  let weekDays = [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
   ];
-  let weekDays = week[weekDay];
+  let day = weekDays[date.getDay()];
+
   let months = [
     "January",
     "February",
@@ -36,22 +38,25 @@ function formatDate(date) {
   ];
   let month = months[date.getMonth()];
   let monthDay = date.getDate();
-  return `${weekDays}, ${month} ${monthDay} </br>${hours}:${minutes}`;
+  return `${day}, ${month} ${monthDay} </br>${hours}:${minutes}`;
 }
 
 // Get all info from the API about a city you search
 
 function showCityInfo(response) {
-  document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  document.querySelector("#temp-description").innerHTML =
-    response.data.weather[0].description;
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#temp-description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#time-date");
+
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 // Automatic location showing when getting in the page (complemented with the search at the bottom)
@@ -80,10 +85,6 @@ function myLocation(event) {
 }
 
 // Variables
-
-let dateElement = document.querySelector(".timeDate");
-let nowDate = new Date();
-dateElement.innerHTML = formatDate(nowDate);
 
 let apiKey = "0709d41b82ab100407f700115e011b71";
 

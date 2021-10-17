@@ -18,15 +18,15 @@ body {
 
 #city-input {
   background: #f9f7fe;
-  border: none;
+  border: 1px solid #f9f7fe;
   padding: 12px 100px;
   border-radius: 5px;
 }
 
 #submit {
-  background: #fff;
-  border: 1px solid rgb(170, 170, 170);
-  padding: 13px 15px;
+  background: #f9f7fe;
+  border: 1px solid #f9f7fe;
+  padding: 15px 25px;
   margin-right: 5px;
   border-radius: 5px;
   cursor: pointer;
@@ -36,10 +36,10 @@ body {
 }
 
 button {
-  background: #ffff;
-  border: 1px solid rgb(170, 170, 170);
+  background: #f9f7fe;
+  border: 1px solid #f9f7fe;
   border-radius: 5px;
-  padding: 13px 15px;
+  padding: 15px 15px;
   margin-right: 5px;
   cursor: pointer;
   font-size: 12px;
@@ -53,7 +53,7 @@ button {
   color: #222222;
 }
 
-.timeDate {
+#time-date {
   font-size: 15px;
   color: rgb(100, 100, 100);
   font-weight: normal;
@@ -70,25 +70,23 @@ button {
   font-size: 100px;
 }
 
-#celsius {
+#units {
   color: #222222;
-  font-size: 15px;
-  font-weight: normal;
+  font-size: 13px;
+  font-weight: bold;
+  position: relative;
+  top: -50px;
 }
 
 #temp-description {
   color: #222222;
   font-size: 20px;
   font-weight: bold;
-  line-height: normal;
-  text-transform: capitalize;
 }
 
 #temp-variables {
-  color: rgb(100, 100, 100);
   font-size: 15px;
   padding-top: 10px;
-  font-weight: lighter;
 }
 
 ul {
@@ -98,9 +96,14 @@ ul {
 li {
   height: 30px;
   list-style: none;
+  color: #222222;
 }
 
-.week-days {
+li:first-letter {
+  text-transform: capitalize;
+}
+
+#weekdays {
   text-align: center;
   color: #222222;
   font-size: 15px;
@@ -109,9 +112,10 @@ li {
   padding-bottom: 10px;
 }
 
-.future-forecast-description {
-  padding: 10px 10px;
+#forecast {
+  padding: 50px 4px;
   margin: 2px;
+  margin-bottom: 20px;
   text-align: center;
   color: rgb(100, 100, 100);
   font-size: 14px;
@@ -120,11 +124,9 @@ li {
 }
 
 footer {
-  color: rgb(100, 100, 100);
   display: block;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 40px;
   font-size: 10px;
   text-decoration: none;
 }
