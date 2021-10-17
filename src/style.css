@@ -53,6 +53,12 @@ button {
   color: #222222;
 }
 
+#update-text {
+  font-size: 15px;
+  color: rgb(100, 100, 100);
+  font-weight: normal;
+}
+
 #time-date {
   font-size: 15px;
   color: rgb(100, 100, 100);
