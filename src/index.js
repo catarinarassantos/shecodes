@@ -50,6 +50,7 @@ function showCityInfo(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#time-date");
+  let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -57,6 +58,8 @@ function showCityInfo(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wm/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("alt", responsa.data.weather[0].description);
 }
 
 // Automatic location showing when getting in the page (complemented with the search at the bottom)
