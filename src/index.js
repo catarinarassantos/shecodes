@@ -12,13 +12,13 @@ function formatDate(timestamp) {
     minutes = `0${minutes}`;
   }
   let weekDays = [
-    "Sun",
-    "Mon",
-    "Tue",
-    "Wed",
-    "Thu",
-    "Fri",
-    "Sat"
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
   ];
   let day = weekDays[date.getDay()];
 
