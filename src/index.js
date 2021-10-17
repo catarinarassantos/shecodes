@@ -51,13 +51,12 @@ function showCityInfo(response) {
     response.data.wind.speed
   );
   document.querySelector("#temp-description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 }
 
 // Automatic location showing when getting in the page (complemented with the search at the bottom)
 
 function showPosition(city) {
-  let apiKey = "0709d41b82ab100407f700115e011b71";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showCityInfo);
 }
@@ -86,7 +85,7 @@ let dateElement = document.querySelector(".timeDate");
 let nowDate = new Date();
 dateElement.innerHTML = formatDate(nowDate);
 
-let apiKey = "b5a777ab71fc602967504eb64daf1657";
+let apiKey = "0709d41b82ab100407f700115e011b71";
 
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", searchCity);
