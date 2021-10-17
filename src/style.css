@@ -21,6 +21,7 @@ body {
   border: 1px solid #f9f7fe;
   padding: 12px 100px;
   border-radius: 5px;
+  font-size: 13px;
 }
 
 #submit {
