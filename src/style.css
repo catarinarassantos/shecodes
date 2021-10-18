@@ -88,11 +88,21 @@ button {
   margin-left: 0;
 }
 
-#units {
-  font-size: 15px;
-  font-weight: bold;
+
+.weather-temperature .units {
   position: relative;
-  top: -35px;
+  font-size: 13px;
+  font-weight: bold;
+  top: -34px;
+}
+
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
 
 #temp-description {
