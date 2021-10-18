@@ -92,7 +92,6 @@ button {
 .weather-temperature .units {
   position: relative;
   font-size: 12px;
-  text-decoration: none;
   top: -34px;
 }
 
