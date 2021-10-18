@@ -85,7 +85,6 @@ button {
   font-size: 80px;
   font-weight: bold;
   margin-right: 3px;
-  margin-left: 0;
 }
 
 
@@ -96,12 +95,12 @@ button {
 }
 
 .weather-temperature .active {
-  color: rgb(33, 33, 33);
-  cursor: default;
+  color: #222222;
 }
 
 .weather-temperature .active:hover {
   text-decoration: none;
+  cursor: default;
 }
 
 #temp-description {
