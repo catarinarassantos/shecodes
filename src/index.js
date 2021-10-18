@@ -87,6 +87,18 @@ function myLocation(event) {
   navigator.geolocation.getCurrentPosition(buttonCurrent);
 }
 
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = 66;
+  }
+
+  function convertToCelsius(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = 19;
+    }
+
 // Variables
 
 let apiKey = "0709d41b82ab100407f700115e011b71";
@@ -97,4 +109,10 @@ form.addEventListener("submit", searchCity);
 let currentLocation = document.querySelector("button");
 currentLocation.addEventListener("click", myLocation);
 
-showPosition("Lisbon");
+  let fahrenheitLink = document.querySelector("#fahrenheit-link"); 
+  fahrenheitLink.addEventListener("click", convertToFahrenheit); 
+  
+  let celsiusLink = document.querySelector("#celsius-link");
+  celsiusLink.addEventListener("click", convertToCelsius);
+
+  showPosition("Lisbon");
