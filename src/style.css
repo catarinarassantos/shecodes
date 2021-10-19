@@ -127,24 +127,23 @@ li:first-letter {
   text-transform: capitalize;
 }
 
-#weekdays {
+.forecast {
+  margin-top: 20px;
   text-align: center;
-  color: #222222;
-  font-size: 15px;
-  font-weight: bold;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  color:#222222;
 }
 
-#forecast {
-  padding: 50px 4px;
-  margin: 2px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: rgb(100, 100, 100);
-  font-size: 14px;
-  border: 1px dashed rgb(165, 165, 165);
-  border-radius: 3px;
+.forecast-weekday {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.forecast-temperature {
+  font-size: 13px;
+}
+
+.forecast-temperature-min {
+  opacity: 0.5;
 }
 
 footer {
