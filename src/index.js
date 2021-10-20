@@ -43,9 +43,8 @@ function formatDate(timestamp) {
 
 // Forecast
 
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-
   let days = ["Sun", "Mon", "Tue", "Wed"];
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
@@ -64,6 +63,15 @@ function displayForecast() {
   });
 forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+// Call the future forecast
+
+function getForecast (coordinates) {
+let apiKey = "0709d41b82ab100407f700115e011b71";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 // Get all info from the API about a city you search
@@ -87,11 +95,13 @@ function showCityInfo(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
+getForecast(response.data.coord);
 }
 
 // Automatic location showing when getting in the page (complemented with the search at the bottom)
 
 function showPosition(city) {
+  let apiKey = "0709d41b82ab100407f700115e011b71";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showCityInfo);
 }
@@ -104,7 +114,8 @@ function searchCity(event) {
 
 function buttonCurrent(position) {
   let myLat = position.coords.latitude;
-  let myLon = position.coords.longitude;
+let myLon = position.coords.longitude;
+let apiKey = "0709d41b82ab100407f700115e011b71";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showCityInfo);
 }
@@ -133,8 +144,6 @@ function convertToFahrenheit(event) {
 
 // Variables
 
-let apiKey = "0709d41b82ab100407f700115e011b71";
-
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", searchCity);
 
@@ -150,5 +159,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 showPosition("Lisbon");
-displayForecast();
-
