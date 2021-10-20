@@ -58,7 +58,7 @@ function displayForecast(response) {
     if (index < 6){
   forecastHTML = forecastHTML + `
   <div class="col-2">
-    <div class="forecast-weekday">${formatDay(forecastDay.dt)}</div>}
+    <div class="forecast-weekday">${formatForecastDay(forecastDay.dt)}</div>
     <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
     alt=""
     width="50" />
@@ -70,7 +70,7 @@ function displayForecast(response) {
 `;
     }
   });
-forecastHTML = forecastHTML + `</div>`;
+  forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
@@ -79,7 +79,6 @@ forecastHTML = forecastHTML + `</div>`;
 function getForecast (coordinates) {
 let apiKey = "0709d41b82ab100407f700115e011b71";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
