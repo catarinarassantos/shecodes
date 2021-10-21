@@ -93,24 +93,6 @@ button {
   margin-right: 3px;
 }
 
-.weather-temperature #units {
-  position: relative;
-  font-size: 12px;
-  top: -34px;
-  text-decoration: none;
-}
-
-.weather-temperature .active {
-  color: #222222;
-  cursor: default;
-  text-decoration: none;
-
-}
-
-.weather-temperature .active:hover {
-  text-decoration: none;
-}
-
 #temp-description {
   color: #222222;
   font-size: 20px;
