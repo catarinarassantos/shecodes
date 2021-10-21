@@ -18,9 +18,6 @@ body {
 
 #city-input {
   display: block;
-  position: relative;
-  width: 100%;
-  padding: 15px 20px;
   background: #f9f7fe;
   border: 1px solid #f9f7fe;
   border-radius: 5px;
@@ -28,17 +25,27 @@ body {
 }
 
 #submit {
-  background: #7763aa;
-  border: 1px solid #7763aa;
+  background: #f9f7fe;
+  border: 1px solid #f9f7fe;
+  padding: 15px 25px;
   margin-right: 5px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 12px;
-  color: #ffff;
-  font-weight: bold;
-  position: relative;
-  width: 100%;
+  color: #222222;
+  font-weight: lighter;
+}
+
+button {
+  background: #f9f7fe;
+  border: 1px solid #f9f7fe;
+  border-radius: 5px;
   padding: 15px 15px;
+  margin-right: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #222222;
+  font-weight: lighter;
 }
 
 #city {
